@@ -4,19 +4,31 @@
 
 Use:
 <code>
-<head><br>
-    <meta charset="utf-8"><br>
-    <title>Exemple RobinForm</title><br>
-    <script src="../src/RobinForm.js"></script><br>
-</head><br>
-<br>
-...<br>
-<br>
+    
+<head>
+    
+    <meta charset="utf-8">
+    
+    <title>Exemple RobinForm</title>
+    
+    <script src="../src/RobinForm.js"></script>
+    
+</head>
+
+
+...
+
+
 <script type="text/javascript"><br>
-    document.addEventListener('DOMContentLoaded', function() {<br>
-        robinForm('form');<br>
-    })<br>
-</script><br>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+    
+        robinForm('form');
+        
+    })
+    
+</script>
+
 </code>
 
 <p>In the function "robinForm" as a parameter specify the block from which you want to process the fields</p>
