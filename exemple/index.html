@@ -24,7 +24,7 @@
           </div>
           <div class="radio">
             <label for="radios-1">
-                <input type="radio" name="radios" id="radios-1" value="2">
+                <input onclick="self();" type="radio" name="radios" id="radios-1" value="2">
                 Option two
             </label>
         </div>
@@ -152,6 +152,11 @@
     {
         echoHtml.textContent = document.querySelector('form').innerHTML;
     }
+
+    function self() {
+        // body...
+    }
+
 </script>
 </body>
 </html>

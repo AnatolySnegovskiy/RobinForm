@@ -3,27 +3,34 @@ function robinForm(headerElement) {
 
     for (var elem of bodyForm.getElementsByTagName('input')) {
         if (elem.type.toLowerCase() == 'checkbox') {
-            elem.setAttribute('onclick', 'checkboxSetter(this);');
+            elem.setAttribute('onclick', getContentDefaultAttr(elem, 'onclick') + 'checkboxSetter(this);');
         }
         else if (elem.type.toLowerCase() == 'radio') {
-            elem.setAttribute('onclick', 'radioSetter(this);');
+            elem.setAttribute('onclick', getContentDefaultAttr(elem, 'onclick') + 'radioSetter(this);');
         } else {
-            elem.setAttribute('onkeyup', 'inputSetter(this);');
+            elem.setAttribute('onkeyup', getContentDefaultAttr(elem, 'onkeyup') + 'inputSetter(this);');
         }
     }
 
     for (var elem of bodyForm.getElementsByTagName('textarea')) {
-        elem.setAttribute('onchange', 'textareaSetter(this);');
+        elem.setAttribute('onchange', getContentDefaultAttr(elem, 'onchange') + 'textareaSetter(this);');
     }
 
     for (var elem of bodyForm.getElementsByTagName('option')) {
-        elem.setAttribute('onclick', 'optionSetter(this);');
+        elem.setAttribute('onclick', getContentDefaultAttr(elem, 'onclick') + 'optionSetter(this);');
     }
 
     for (var elem of bodyForm.getElementsByTagName('select')) {
-        elem.setAttribute('onchange', 'selectSetter(this);');
+        elem.setAttribute('onchange', getContentDefaultAttr(elem, 'onchange') + 'selectSetter(this);');
     }
 };
+
+function getContentDefaultAttr(elem, attr)
+{   
+    defaultAttr = elem.getAttribute(attr);
+
+    return defaultAttr != null ? defaultAttr : '';
+}
 
 function checkboxSetter(elem) {
     if (elem.checked) {
