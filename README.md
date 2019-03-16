@@ -4,7 +4,7 @@
 
 Use:
 
-```  
+``` 
 <head>
     <meta charset="utf-8">
     <title>Exemple RobinForm</title>
@@ -19,5 +19,5 @@ Use:
         robinForm('form');
     }) 
 </script>
-
+```
 <p>In the function "robinForm" as a parameter specify the block from which you want to process the fields</p>
