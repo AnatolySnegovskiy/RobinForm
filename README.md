@@ -3,8 +3,8 @@
 <p>his script is designed to make it easier to get the html content of the page with the data that was entered in the form fields.</p>
 
 Use:
-<code>
-    
+
+```  
 <head>
     
     <meta charset="utf-8">
@@ -15,9 +15,7 @@ Use:
     
 </head>
 
-
-...
-
+------
 
 <script type="text/javascript"><br>
     
@@ -28,7 +26,6 @@ Use:
     })
     
 </script>
-
-</code>
+...
 
 <p>In the function "robinForm" as a parameter specify the block from which you want to process the fields</p>
