@@ -1,6 +1,6 @@
 <h1 style="text-align:center; font-size:60px;">RobinForm</h1>
 
-<p>his script is designed to make it easier to get the html content of the page with the data that was entered in the form fields.</p>
+<p>This script is designed to make it easier to get the html content of the page with the data that was entered in the form fields.</p>
 
 Use:
 
