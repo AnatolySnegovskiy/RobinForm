@@ -6,7 +6,9 @@ function robinForm(headerElement) {
             elem.setAttribute('onclick', getContentDefaultAttr(elem, 'onclick') + 'checkboxSetter(this);');
         }
         else if (elem.type.toLowerCase() == 'radio') {
-            elem.setAttribute('onclick', getContentDefaultAttr(elem, 'onclick') + 'radioSetter(this);');
+
+        } else if (elem.getAttribute('data-role') == 'tagsinput') {    
+            elem.parentElement.setAttribute('onchange', getContentDefaultAttr(elem, 'onchange') + 'tagInput(this);');
         } else {
             elem.setAttribute('onkeyup', getContentDefaultAttr(elem, 'onkeyup') + 'inputSetter(this);');
         }
@@ -74,4 +76,10 @@ function selectSetter(elem)
     }
 
     elem.querySelector('[value="'+elem.value+'"]').setAttribute('selected', 'selected');
+}
+
+function tagInput(elem)
+{
+    var inputTag = elem.querySelector('[data-role="tagsinput"]');
+    inputTag.setAttribute('value', inputTag.value);
 }

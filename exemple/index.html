@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>Exemple RobinForm</title>
     <script src="../src/RobinForm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    
+    <script src="bootstrap-tagsinput.js"></script>
 </head>
 <body>
   <form class="form-horizontal" onchange="echoHtmlForm();">
@@ -103,6 +106,15 @@
     <label class="col-md-4 control-label" for="textinput">Text Input</label>  
     <div class="col-md-4">
         <input id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
+        <span class="help-block">help</span>  
+    </div>
+</div>
+
+<!-- Tag input-->
+<div class="form-group">
+    <label class="col-md-4 control-label" for="textinput">Text Input</label>  
+    <div class="col-md-4">
+        <input data-role="tagsinput" id="textinput" name="textinput" type="text" placeholder="placeholder" class="form-control input-md">
         <span class="help-block">help</span>  
     </div>
 </div>
