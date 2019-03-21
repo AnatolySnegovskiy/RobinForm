@@ -4,9 +4,8 @@ function robinForm(headerElement) {
     for (var elem of bodyForm.getElementsByTagName('input')) {
         if (elem.type.toLowerCase() == 'checkbox') {
             elem.setAttribute('onclick', getContentDefaultAttr(elem, 'onclick') + 'checkboxSetter(this);');
-        }
-        else if (elem.type.toLowerCase() == 'radio') {
-
+        } else if (elem.type.toLowerCase() == 'radio') {
+			elem.setAttribute('onclick', getContentDefaultAttr(elem, 'onclick') + 'radioSetter(this);');
         } else if (elem.getAttribute('data-role') == 'tagsinput') {    
             elem.parentElement.setAttribute('onchange', getContentDefaultAttr(elem, 'onchange') + 'tagInput(this);');
         } else {
