@@ -13,7 +13,7 @@ Use:
 
 ...
 
-<script type="text/javascript"><br>
+<script type="text/javascript">
     
     document.addEventListener('DOMContentLoaded', function() {
         robinForm('form');
